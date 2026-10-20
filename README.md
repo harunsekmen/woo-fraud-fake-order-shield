@@ -1,10 +1,10 @@
 # 🚀 WooCommerce Anti-Fraud & Bot Order Shield
 
-[![WooCommerce HPOS Ready](https://img.shields.io/badge/Compatibility-Production%20Ready-7f54b3.svg)](#)
+[![WooCommerce HPOS Ready](https://img.shields.io/badge/WooCommerce-HPOS%20Ready-7f54b3.svg)](https://github.com/harunsekmen/woo-fraud-fake-order-shield)
 [![License: GPL-3.0](https://img.shields.io/badge/License-GPL%203.0-blue.svg)](LICENSE)
-[![Open Source](https://img.shields.io/badge/Open%20Source-Community%20Project-brightgreen.svg)](#)
+[![Open Source](https://img.shields.io/badge/Open%20Source-Production%20Grade-brightgreen.svg)](#)
 
-> Non-intrusive rate limiting, IP reputation checks, and honeypot traps that disarm bots before payment gateway submission.
+> Non-intrusive fraud protection for WooCommerce. Stops card-testing automated attacks, disposable email abuse, and fake COD orders before payment gateway submission with zero customer friction.
 
 Developed and maintained by **[Harun Sekmen](https://github.com/harunsekmen)** — E-Commerce Systems Engineer & WooCommerce Specialist.
 
@@ -12,43 +12,38 @@ Developed and maintained by **[Harun Sekmen](https://github.com/harunsekmen)** �
 
 ---
 
-## ⚡ The Problem It Solves
+## 📸 Operational WordPress Admin Interface
 
-Automated card-testing attacks flood checkouts with hundreds of fraudulent attempts, risking merchant account suspension.
+Security telemetry and bot interception log inside WordPress Admin (WooCommerce > Fraud Shield):
 
-Targeted specifically for **Stores targeted by card-testing bot attacks or fake COD orders**.
+![Fraud Shield Admin Dashboard](docs/assets/admin-fraud-shield-dashboard.png)
 
-Common search inquiries addressed by this repository: `woocommerce block fake orders`, `woocommerce fraud prevention free`, `woocommerce stop card testing attacks`.
+---
+
+## ⚡ The Measurable Outcome
+
+- **Eliminates Gateway Chargeback Fees:** Stops automated card-testing scripts from running hundreds of unauthorized micro-transactions.
+- **Protects Sanal POS Merchant Accounts:** Prevents Stripe, PayPal, iyzico, or PayTR from flagging your store for unusual failure rates.
+- **Zero Captcha Friction:** Uses invisible honeypots and velocity timers so real human buyers never have to solve annoying puzzles.
+- **Blocks Disposable Email Abuse:** Automatically rejects temporary inbox domains (`mailinator.com`, `tempmail.com`, `10minutemail.com`).
 
 ---
 
 ## 🛠️ Key Architectural Features
 
-- **Production-Ready Architecture:** Built with clean standards (PHP 8.1+, Action Scheduler, WooCommerce REST API).
-- **Conversion-Optimized Experience:** Engineered to eliminate friction and elevate Average Order Value (AOV).
-- **Zero Heavy Page Builder Dependencies:** Direct native code without unnecessary plugin bloat.
-- **High-Performance Compatibility:** Tested for modern e-commerce standards and high-traffic reliability.
-
----
-
-## 💻 Tech Stack & Standards
-
-- **Platform:** WooCommerce
-- **Category:** Checkout & Funnels
-- **Technologies:** PHP 8.1+, Action Scheduler, WooCommerce REST API
+- **Multi-Layer Defense:** Invisible honeypot trap, submission velocity check (< 2s triggers rejection), and IP rate limiter (max 5 orders / 10m).
+- **Transient-Based Rate Limiting:** Efficient in-memory caching that adds zero heavy database query overhead.
+- **Detailed WP Admin Telemetry:** Real-time log of blocked bot attempts and IP origins directly in WooCommerce dashboard.
+- **HPOS Compatible:** Hooks into `woocommerce_after_checkout_validation` without legacy postmeta dependencies.
 
 ---
 
 ## 💼 Work With Harun Sekmen
 
-Need this architecture customized for your brand, or looking for turnkey e-commerce engineering?
+- **Payment Security & Gateway Integration:** Stripe, PayPal, iyzico, PayTR, and custom virtual POS security hardening.
+- **Checkout Optimization:** High-converting checkout funnels with automated fraud prevention.
 
-- **Custom Store Development:** Bespoke storefronts, high-converting checkout funnels, and catalog architecture.
-- **Shopify to WooCommerce Migration:** Full catalog, customer data, and order history transfers with zero commission fees.
-- **Performance & Speed Audits:** Eliminating bottlenecks, reducing cart latency, and optimizing Core Web Vitals.
-- **Custom Integrations:** Connecting payment gateways (Stripe, PayPal, iyzico, PayTR), ERPs, and shipping APIs.
-
-📩 **Inquiries:** Send your project brief or store URL to **[sekmenwp@gmail.com](mailto:sekmenwp@gmail.com)** or connect on **[LinkedIn](https://www.linkedin.com/in/harunsekmen/)**.
+📩 **Inquiries:** Send your project brief to **[sekmenwp@gmail.com](mailto:sekmenwp@gmail.com)** or connect on **[LinkedIn](https://www.linkedin.com/in/harunsekmen/)**.
 
 ---
 
