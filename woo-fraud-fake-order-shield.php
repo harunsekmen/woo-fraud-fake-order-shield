@@ -23,3 +23,5 @@ add_action('before_woocommerce_init', function () {
 require_once __DIR__ . '/includes/class-fraud-shield.php';
 
 add_action('plugins_loaded', ['Woo_Fraud_Fake_Order_Shield', 'instance']);
+
+require_once __DIR__ . '/includes/class-admin.php';
