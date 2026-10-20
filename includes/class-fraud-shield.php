@@ -42,7 +42,7 @@ final class Woo_Fraud_Fake_Order_Shield {
         }
 
         // Check 2: Form submission velocity (< 2 seconds implies automated script)
-        $form_time = (int)($_POST['wffos_form_time'] ?? 0);
+        $form_time = isset($_POST['wffos_form_time']) ? absint(wp_unslash($_POST['wffos_form_time'])) : 0;
         if ($form_time > 0 && (time() - $form_time) < 2) {
             $errors->add('velocity_fail', esc_html__('Submission too rapid. Please retry.', 'woo-fraud-fake-order-shield'));
             return;
