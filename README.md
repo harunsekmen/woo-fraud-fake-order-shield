@@ -47,6 +47,22 @@ Security telemetry and bot interception log inside WordPress Admin (WooCommerce 
 
 ---
 
+## 🧪 Automated Testing & Live Verification
+
+This repository includes a standalone test suite with zero external mock dependencies.
+
+### How to Run Tests
+```bash
+php tests/test-fraud.php
+```
+
+### Verification Scope
+- **Test Target:** `Tests invisible honeypot trap, rapid submission velocity detection (<2s), disposable email blocking (7 domains), and valid customer clearance.`
+- **Environment:** PHP 8.1 - 8.3 CLI + WooCommerce Validation Hook
+- **Status:** All assertions passing (0 errors, 0 warnings under strict error reporting).
+
+---
+
 ## 📄 License
 
 This open-source project is licensed under the **[GNU General Public License v3.0](LICENSE)**.
